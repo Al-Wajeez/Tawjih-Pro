@@ -1,0 +1,26 @@
+directories:
+  output: release
+  buildResources: public
+publish: null
+appId: com.tawjihpro.app
+productName: Tawjih Pro
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+      - public/favicon.ico
+win:
+  target: nsis
+  icon: public/favicon.ico
+nsis:
+  oneClick: false
+  differentialPackage: false
+  installerIcon: public/favicon.ico
+  uninstallerIcon: public/favicon.ico
+  uninstallDisplayName: Tawjih Pro
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+linux:
+  target: AppImage
+electronVersion: 28.3.3
